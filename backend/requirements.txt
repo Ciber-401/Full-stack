@@ -9,7 +9,7 @@ bs4==0.0.1
 certifi==2021.10.8
 cffi==1.15.0
 charset-normalizer==2.0.11
-click==6.5
+click==7.1.2
 colorama==0.4.4
 coreapi==2.3.3
 coreschema==0.0.4
