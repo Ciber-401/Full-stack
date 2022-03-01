@@ -11,7 +11,6 @@ from django.utils import timezone
 User = get_user_model()
 
 
-
 class Comment(models.Model):
     username = models.CharField(max_length=60)
     email = models.EmailField()
@@ -20,8 +19,10 @@ class Comment(models.Model):
         verbose_name = 'comment'
         verbose_name_plural = 'comments'
         ordering = ['-username']
+
     def __str__(self):
         return self.username
+
 
 class Category(models.Model):
 
@@ -43,6 +44,8 @@ class Product(models.Model):
     slug = models.SlugField(unique=True)
     comment = models.ForeignKey(Comment,on_delete=models.CASCADE,null=True,blank=True)
     image = models.ImageField(verbose_name='Изображение',upload_to='image/%Y/%m/%d',blank=True)
+    # likes = models.IntegerField(verbose_name='лайки' ,default=0)
+    # views = models.PositiveIntegerField(verbose_name='просмотры',default=0)
     description = models.TextField(verbose_name='Описание', null=True)
     price = models.DecimalField(max_digits=9, decimal_places=0, verbose_name='Цена')
 
