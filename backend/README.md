@@ -3,7 +3,7 @@
 
 # clone this repo 
 ```
-git clone https://github.com/ShairbekovBakyt/DRF_Shop
+git@github.com:Ciber-401/Full-stack.git
 ```
 # you need to open repo directory
 ```
